@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Star, Github, Sparkles, Download, Edit3 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -21,11 +22,14 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="outline" size="sm" className="hidden sm:flex">
-              <Github className="h-4 w-4 mr-2" />
-              <Star className="h-3 w-3 mr-1" />
-              Star on GitHub
-            </Button>
+            <Link href={"https://github.com/kartikmalik0/PostCraft"} target="_blank">
+              <Button variant="outline" size="sm" className="hidden sm:flex">
+                <Github className="h-4 w-4 mr-2" />
+                <Star className="h-3 w-3 mr-1" />
+                Star on GitHub
+              </Button>
+            </Link>
+
             <ThemeToggle />
           </div>
         </div>
@@ -146,10 +150,12 @@ export default function Home() {
               <span className="font-medium">PostCraft</span>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="sm">
-                <Github className="h-4 w-4 mr-2" />
-                GitHub
-              </Button>
+              <Link href={"https://github.com/kartikmalik0/PostCraft"} target="_blank">
+                <Button variant="ghost" size="sm">
+                  <Github className="h-4 w-4 mr-2" />
+                  GitHub
+                </Button>
+              </Link>
               <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} PostCraft. Made with ❤️</p>
             </div>
           </div>
