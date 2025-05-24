@@ -55,7 +55,7 @@ export default function XTemplate() {
       return
     }
 
-    toPng(postRef.current, { 
+    toPng(postRef.current, {
       cacheBust: true,
       quality: 1.0,
       pixelRatio: 2,
@@ -266,10 +266,8 @@ export default function XTemplate() {
             <p className="text-sm text-muted-foreground">Your post will look exactly like this</p>
           </div>
 
-<div ref={postRef}>
-
-</div>
           <div
+            ref={postRef}
             className={`w-full rounded-xl shadow-xl overflow-hidden ${lightMode ? "bg-white text-black" : "bg-black text-white"}`}
           >
             <div className="p-6">
