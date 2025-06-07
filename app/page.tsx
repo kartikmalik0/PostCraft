@@ -1,6 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import LinkedInTemplate from "@/components/linkedin-template"
 import XTemplate from "@/components/x-template"
+import InstagramTemplate from "@/components/instagram-template"
+import FacebookTemplate from "@/components/facebook-template"
+import TikTokTemplate from "@/components/tiktok-template"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Star, Github, Sparkles, Download, Edit3 } from "lucide-react"
@@ -49,7 +52,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Design professional LinkedIn and X (Twitter) posts that look exactly like the real thing. Customize
+            Design professional social media posts for LinkedIn, X (Twitter), Instagram, Facebook, and TikTok that look exactly like the real thing. Customize
             everything and download instantly.
           </p>
 
@@ -113,19 +116,40 @@ export default function Home() {
         <div className="container mx-auto max-w-7xl">
           <Tabs defaultValue="linkedin" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid w-full max-w-md grid-cols-2 h-12 p-1 bg-muted/50 backdrop-blur-sm">
+              <TabsList className="grid w-full max-w-4xl grid-cols-5 h-12 p-1 bg-muted/50 backdrop-blur-sm">
                 <TabsTrigger
                   value="linkedin"
-                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm"
+                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm text-xs"
                 >
-                  <div className="h-4 w-4 bg-blue-600 rounded"></div>
+                  <div className="h-3 w-3 bg-blue-600 rounded"></div>
                   LinkedIn
                 </TabsTrigger>
                 <TabsTrigger
                   value="x"
-                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm"
+                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm text-xs"
                 >
-                  <div className="h-4 w-4 bg-black dark:bg-white rounded"></div>X (Twitter)
+                  <div className="h-3 w-3 bg-black dark:bg-white rounded"></div>X
+                </TabsTrigger>
+                <TabsTrigger
+                  value="instagram"
+                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm text-xs"
+                >
+                  <div className="h-3 w-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded"></div>
+                  Instagram
+                </TabsTrigger>
+                <TabsTrigger
+                  value="facebook"
+                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm text-xs"
+                >
+                  <div className="h-3 w-3 bg-blue-600 rounded"></div>
+                  Facebook
+                </TabsTrigger>
+                <TabsTrigger
+                  value="tiktok"
+                  className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-sm text-xs"
+                >
+                  <div className="h-3 w-3 bg-black rounded"></div>
+                  TikTok
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -134,6 +158,15 @@ export default function Home() {
             </TabsContent>
             <TabsContent value="x" className="mt-0">
               <XTemplate />
+            </TabsContent>
+            <TabsContent value="instagram" className="mt-0">
+              <InstagramTemplate />
+            </TabsContent>
+            <TabsContent value="facebook" className="mt-0">
+              <FacebookTemplate />
+            </TabsContent>
+            <TabsContent value="tiktok" className="mt-0">
+              <TikTokTemplate />
             </TabsContent>
           </Tabs>
         </div>
